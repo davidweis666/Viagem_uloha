@@ -22,7 +22,7 @@ Požadavky
 Spuštění
 
 v cmd:
-    docker compose up --build
+    docker compose up -d --build
 
 
 První start chvíli trvá: čeká se na MongoDB, stáhnou se 7 ZIP sad a naimportují se parcely. Další starty import přeskočí, pokud databáze není prázdná.
