@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 final class Translations {
-    const LABELS = [
+    private const LABELS = [
         'ArableGround' => 'Orná půda',
         'Hopgarden' => 'Chmelnice',
         'Vineyard' => 'Vinice',
@@ -34,24 +34,36 @@ final class Translations {
     ];
 
     public static function label(?string $code): ?string {
-        if ($code == null || $code == '' || !$code) {
+        if (!$code) {
             return null;
         }
 
-        return self::LABELS[$code] ? self::LABELS[$code] : null;
+        return self::LABELS[$code] ?? null;
     }
 
     public static function fromHref(?string $href): ?string {
-        if ($href == null || $href == '' || !$href) {
+        if (!$href) {
+            error_log('TRANSLATION: href is NULL/EMPTY');
             return null;
         }
 
         $path = parse_url($href, PHP_URL_PATH);
 
         if (!$path) {
+            error_log('TRANSLATION: cannot parse path: ' . $href);
             return null;
         }
 
-        return self::label(rawurldecode(basename($path)));
+        $code = basename(rtrim($path, '/'));
+        $code = rawurldecode($code);
+
+        error_log('TRANSLATION HREF: ' . $href);
+        error_log('TRANSLATION PATH: ' . $path);
+        error_log('TRANSLATION CODE: ' . $code);
+        error_log(
+            'TRANSLATION LABEL: ' . (self::LABELS[$code] ?? 'NOT FOUND')
+        );
+
+        return self::label($code);
     }
 }
