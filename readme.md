@@ -45,7 +45,7 @@ Jak to funguje
 Jak jsem postupoval
 
 Nejdříve jsem si připravil prostředí dockeru a složky js a src. Otevřel jsem návod jak použít GoogleMaps jako základ mapy, ale postupně mi došlo že OpenStreetMap bude lepší, protože nepotřebuje API_KEY.
-Stvořil jsem základní mapu a sidebar. Také jsem použil knihovnu Leaflet na rozeznání místa kde uživatel klikl. S tím jak použít ČÚZK API jsem si nechal výrazně poradit od chatgpt. Znovu jsem si přečetl zadání abych se ujistil že je vše správně. Uvědomil jsem si že podmínka 4 katastrů by mohla naznačovat že to chcete lokálně. Proto jsem do dockeru přidal mongodb a začal jsem backend od znova. Nechal jsem si připravit celý import zip souborů do mongodb. Nechal jsem si připravit všechny mongodb operace od ai, protože jsem mongodb nikdy nepoužíval a je to rychlejší než číst dokumentaci. Program jsem dokončil, nahrál na github a zkusil znovu zprovoznit podle tohoto návodu.
+Stvořil jsem základní mapu a sidebar. Také jsem použil knihovnu Leaflet na rozeznání místa kde uživatel klikl. S tím jak použít ČÚZK API jsem si nechal výrazně poradit od chatgpt. Znovu jsem si přečetl zadání abych se ujistil že je vše správně. Uvědomil jsem si že podmínka 4 katastrů by mohla naznačovat že to chcete lokálně. Proto jsem do dockeru přidal mongodb a začal jsem backend od znova. Nechal jsem si připravit celý import zip souborů do mongodb. Nechal jsem si připravit všechny mongodb operace od ai, protože jsem mongodb nikdy nepoužíval. Program jsem dokončil, nahrál na github a zkusil znovu zprovoznit podle tohoto návodu.
 
 Struktura
 
