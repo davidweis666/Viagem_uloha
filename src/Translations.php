@@ -38,7 +38,7 @@ final class Translations {
             return null;
         }
 
-        return self::LABELS[$code] ? $code : null;
+        return self::LABELS[$code] ? self::LABELS[$code] : null;
     }
 
     public static function fromHref(?string $href): ?string {
