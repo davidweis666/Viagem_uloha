@@ -1,0 +1,5 @@
+/data/db/
+/data/
+*.xml
+.DS_Store
+Thumbs.db
